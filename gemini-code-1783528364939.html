@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candidate Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 data-en="Candidate Registration" data-hi="उम्मीदवार पंजीकरण">Candidate Registration</h1>
+            <button id="lang-toggle" class="btn-secondary">हिन्दी</button>
+        </header>
+
+        <form id="registrationForm">
+            <div class="form-group">
+                <label for="name" data-en="Full Name" data-hi="पूरा नाम">Full Name</label>
+                <input type="text" id="name" required placeholder="John Doe">
+            </div>
+
+            <div class="form-group">
+                <label for="email" data-en="Email Address" data-hi="ईमेल पता">Email Address</label>
+                <input type="email" id="email" required placeholder="john@example.com">
+            </div>
+
+            <div class="form-group">
+                <label for="mobile" data-en="Mobile Number" data-hi="मोबाइल नंबर">Mobile Number</label>
+                <input type="tel" id="mobile" required placeholder="1234567890">
+            </div>
+
+            <div class="form-group">
+                <label for="skills" data-en="Skills (Comma separated)" data-hi="कौशल (कॉमा से अलग करें)">Skills (Comma separated)</label>
+                <input type="text" id="skills" required placeholder="Python, JavaScript, SQL">
+            </div>
+
+            <div class="form-group">
+                <label for="idea" data-en="Hackathon Idea" data-hi="हैकाथॉन विचार">Hackathon Idea</label>
+                <div class="input-with-mic">
+                    <textarea id="idea" rows="4" required placeholder="Describe your project idea..."></textarea>
+                    <button type="button" class="mic-btn" data-target="idea" title="Listen">🎤</button>
+                </div>
+            </div>
+
+            <button type="submit" class="btn-submit" data-en="Submit Application" data-hi="आवेदन जमा करें">Submit Application</button>
+        </form>
+
+        <nav class="page-nav">
+            <a href="support.html" data-en="Go to Support/Queries" data-hi="सहायता/प्रश्नों पर जाएं">Go to Support/Queries →</a>
+        </nav>
+
+        <footer>
+            <p data-en="Last Updated: " data-hi="अंतिम अपडेट: ">Last Updated: <span class="last-updated"></span></p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
