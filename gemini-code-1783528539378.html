@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candidate Support & Queries</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 data-en="Candidate Support" data-hi="उम्मीदवार सहायता">Candidate Support</h1>
+            <button id="lang-toggle" class="btn-secondary">हिन्दी</button>
+        </header>
+
+        <div class="suggestions-box">
+            <h3 data-en="Frequently Asked Questions" data-hi="अक्सर पूछे जाने वाले प्रश्न">Common Queries</h3>
+            <div class="suggestions-tags">
+                <button type="button" class="tag-btn" data-en="What is the Wi-Fi password?" data-hi="वाइ-फाइ पासवर्ड क्या है?">What is the Wi-Fi password?</button>
+                <button type="button" class="tag-btn" data-en="Where is the parking facility located?" data-hi="पार्किंग की सुविधा कहाँ स्थित है?">Where is the parking facility located?</button>
+                <button type="button" class="tag-btn" data-en="Urgent: My evaluation link is not working." data-hi="आपातकालीन: मेरा मूल्यांकन लिंक काम नहीं कर रहा है।">Urgent: My evaluation link is not working.</button>
+            </div>
+        </div>
+
+        <form id="supportForm">
+            <div class="form-group">
+                <label for="supportEmail" data-en="Registered Email" data-hi="पंजीकृत ईमेल">Registered Email</label>
+                <input type="email" id="supportEmail" required placeholder="john@example.com">
+            </div>
+
+            <div class="form-group">
+                <label for="query" data-en="Your Query / Issue" data-hi="आपका प्रश्न / समस्या">Your Query / Issue</label>
+                <div class="input-with-mic">
+                    <textarea id="query" rows="5" required placeholder="Type or use the mic to state your query..."></textarea>
+                    <button type="button" class="mic-btn" data-target="query" title="Listen">🎤</button>
+                </div>
+            </div>
+
+            <button type="submit" class="btn-submit" data-en="Submit Query" data-hi="प्रश्न सबमिट करें">Submit Query</button>
+        </form>
+
+        <nav class="page-nav">
+            <a href="index.html" data-en="← Back to Registration" data-hi="← पंजीकरण पर वापस जाएं">← Back to Registration</a>
+        </nav>
+
+        <footer>
+            <p data-en="Last Updated: " data-hi="अंतिम अपडेट: ">Last Updated: <span class="last-updated"></span></p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
