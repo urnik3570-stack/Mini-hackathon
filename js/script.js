@@ -1,5 +1,5 @@
 // CONFIGURATION: Replace these with your actual n8n Webhook URLs
-const N8N_REGISTRATION_WEBHOOK_URL ='https://cubic-juan-compact-klein.trycloudflare.com/webhook-test/49d614a1-6967-4856-ba14-788ad6b04475';
+const N8N_REGISTRATION_WEBHOOK_URL ='https://cubic-juan-compact-klein.trycloudflare.com/webhook/49d614a1-6967-4856-ba14-788ad6b04475';
 const N8N_SUPPORT_WEBHOOK_URL = 'https://your-n8n-instance.com/webhook/support-id';
 
 // Hardcoded Build Timestamp (representing last changes made to files)
