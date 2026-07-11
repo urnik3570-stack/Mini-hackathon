@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digital Saathi — Hackathon Help Desk</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Hind:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="counter">
+  <div class="counter__brand">
+    <span class="counter__mark">डS</span>
+    <div>
+      <p class="counter__title" data-i18n="brand_title">Digital Saathi</p>
+      <p class="counter__subtitle" data-i18n="brand_subtitle">Kurukshetra Smart India Mini-Hackathon — Help Desk</p>
+    </div>
+  </div>
+
+  <div class="counter__display">
+    <div class="counter__stat">
+      <span class="counter__label" data-i18n="now_serving">NOW SERVING</span>
+      <span class="counter__token" id="tokenNumber">014</span>
+    </div>
+    <div class="counter__stat">
+      <span class="counter__label" data-i18n="today">TODAY</span>
+      <span class="counter__clock" id="liveClock">--:--:--</span>
+    </div>
+  </div>
+
+  <button class="lang-switch" id="langSwitch" role="switch" aria-checked="false" aria-label="Switch language / भाषा बदलें">
+    <span class="lang-switch__opt">EN</span>
+    <span class="lang-switch__opt">हिं</span>
+    <span class="lang-switch__thumb" id="langThumb"></span>
+  </button>
+</header>
+
+<main>
+  <section class="ask card">
+    <h1 data-i18n="ask_heading">Ask your question</h1>
+    <p class="ask__sub" data-i18n="ask_sub">Type freely or pick a common question below — we'll route it to the right desk.</p>
+
+    <div class="ask__identity">
+      <label class="field">
+        <span data-i18n="label_name">Your name</span>
+        <input type="text" id="studentName" data-i18n-placeholder="ph_name" placeholder="e.g. Aarav Sharma" autocomplete="name">
+      </label>
+      <label class="field">
+        <span data-i18n="label_contact">Email or mobile</span>
+        <input type="text" id="studentContact" data-i18n-placeholder="ph_contact" placeholder="you@example.com" autocomplete="email">
+      </label>
+    </div>
+
+    <div class="ask__inputwrap">
+      <button class="mic-btn" id="micBtn" type="button" aria-label="Speak your question">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+          <path fill="currentColor" d="M12 15a3 3 0 0 0 3-3V6a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3Zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.93V21h2v-2.07A7 7 0 0 0 19 12h-2Z"/>
+        </svg>
+      </button>
+
+      <div class="ask__field">
+        <textarea id="queryInput" rows="1" data-i18n-placeholder="ph_query" placeholder="Type your question here…" aria-autocomplete="list" aria-controls="suggestList" aria-expanded="false"></textarea>
+        <ul class="suggestions" id="suggestList" role="listbox" hidden></ul>
+      </div>
+
+      <button class="send-btn" id="sendBtn" type="button" data-i18n="send">Send</button>
+    </div>
+    <p class="mic-status" id="micStatus" aria-live="polite"></p>
+  </section>
+
+  <section class="faq card">
+    <h2 data-i18n="faq_heading">Or pick a common question</h2>
+    <div class="faq__grid" id="faqGrid"></div>
+  </section>
+
+  <section class="log card" id="logSection" hidden>
+    <h2 data-i18n="log_heading">Your queries this session</h2>
+    <ul class="log__list" id="logList"></ul>
+  </section>
+</main>
+
+<footer class="footer">
+  <span data-i18n="footer_updated">Last updated</span>: <span id="lastUpdated">—</span>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
